@@ -1,5 +1,7 @@
 ---
-import '../styles/style.css'
+import "../styles/style.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 const pageTitle = "About Me";
 
@@ -35,6 +37,8 @@ const fontWeight = "bold";
                 font-weight: var(--fontWeight);
             }
         </style>
+
+        <Navigation />
 
         <h1>{pageTitle}</h1>
 
@@ -74,5 +78,7 @@ const fontWeight = "bold";
                 <p>The goal is not to comeplete in 3 days</p>
             )
         }
+
+        <Footer />
     </body>
 </html>
