@@ -13,6 +13,9 @@ const skills = ["Python", "C++", "TypeScript", "React", "Astro"];
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "green";
+const fontWeight = "bold";
 ---
 
 <html lang="en">
@@ -24,6 +27,13 @@ const goal = 3;
         <title>Astro</title>
     </head>
     <body>
+        <style define:vars={{ skillColor, fontWeight }}>
+            .skill {
+                color: var(--skillColor);
+                font-weight: var(--fontWeight);
+            }
+        </style>
+
         <h1>{pageTitle}</h1>
 
         <p>Here are few facts about me</p>
@@ -41,7 +51,7 @@ const goal = 3;
         </ul>
 
         <p>My skills are:</p>
-        <ul>
+        <ul class="skill">
             {skills.map((skill) => <li>{skill}</li>)}
         </ul>
 
